@@ -23,13 +23,12 @@ namespace SV35.POS.Service
 
         public void Dispose() => _context?.Dispose();
         
-        
 
         public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
             => await _context.Category.ToListAsync();
 
         public async Task<Category?> GetCategoryByIdAsync(Guid id)
-        => await _context.Category.FindAsync(id);
+            => await _context.Category.FindAsync(id);
 
         public Task<string> UpdateCategoryAsync(Category category)
         {
