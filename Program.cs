@@ -9,7 +9,7 @@ var connectionString = @"Server=localhost;Port=8889;Database=SV35POS;User=root;P
 builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 // Add services to the container.
-
+builder.Services.AddTransient<SV35.POS.Service.ICategoryService, SV35.POS.Service.CategoryService>();
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
