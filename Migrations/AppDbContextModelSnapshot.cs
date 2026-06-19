@@ -41,6 +41,26 @@ namespace SV.Project.Migrations
 
                     b.ToTable("Category");
                 });
+
+            modelBuilder.Entity("SV35.POS.Models.Product", b =>
+                {
+                    b.Property<Guid>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("ProductId");
+
+                    b.ToTable("Product");
+                });
 #pragma warning restore 612, 618
         }
     }

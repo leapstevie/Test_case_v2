@@ -10,6 +10,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(connecti
 
 // Add services to the container.
 builder.Services.AddTransient<SV35.POS.Service.ICategoryService, SV35.POS.Service.CategoryService>();
+builder.Services.AddTransient<SV35.POS.Service.IProductService, SV35.POS.Service.ProductService>();
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -22,7 +23,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

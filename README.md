@@ -113,7 +113,7 @@ The API will be available at:
 | Environment | Connection String |
 |-------------|-------------------|
 | MAMP (default) | `Server=localhost;Port=8889;Database=SV35POS;User=root;Password=root;` |
-| Local MySQL | `Server=localhost;Port=3306;Database=SV35POS;User=root;Password=;` |
+| Local MySQL | `Server=localhost;Port=3306;Database=SV35POS;User=root;Password=;` |1
 
 To switch connection strings, edit line 8 in `Program.cs`.
 
